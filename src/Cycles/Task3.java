@@ -10,6 +10,7 @@ public class Task3 {
         task3();
         task4();
         task5();
+        task6();
     }
 
     static void task1() {
@@ -72,5 +73,41 @@ public class Task3 {
             System.out.print(correntDay + " " + (correntDay + 1) + " ");
             correntDay += week;
         }
+    }
+
+    static void task6() {
+        System.out.println("\nЗадание " + counter++);
+        int startNum = 1;
+        int finishNum = 999999;
+        int count = 0;
+
+        for (int i = startNum; i < finishNum; startNum++) {
+            int firstPart = i / 1000;
+            int lastPart = i % 1000;
+
+            if (firstPart == 0 || lastPart == 0) {
+                continue;
+            }
+
+            int firstPartSum = sumOfDigits(firstPart);
+            int lastPartSum = sumOfDigits(lastPart);
+
+            if (firstPartSum == lastPartSum) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+
+    }
+
+    static int sumOfDigits(int number) {
+        int sum = 0;
+
+        while (number > 0) {
+            sum = sum + number % 10;
+            number /= 10;
+        }
+        return sum;
     }
 }
