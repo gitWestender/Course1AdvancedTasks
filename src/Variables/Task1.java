@@ -1,5 +1,6 @@
 package Variables;
 
+//Доп задания по переменным
 public class Task1 {
     static int count = 1;
 
