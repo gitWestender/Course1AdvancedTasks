@@ -1,6 +1,7 @@
 package CondOperators;
 
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 //Доп задания по условным операторам
 public class Task2 {
@@ -14,6 +15,7 @@ public class Task2 {
         task3();
         task4();
         task5(12, 6, 4);
+        task6();
     }
 
     static void task1(int p) {
@@ -92,6 +94,12 @@ public class Task2 {
 
     static void task6() {
         System.out.println("\nЗадание " + count++);
+        int time = ThreadLocalRandom.current().nextInt(28000);
+        int workTime = 28800;
+        int timeLeft = workTime - time;
+
+        float hoursLeft = Math.round(timeLeft / (60 * 60));
+        System.out.println("До конца дня осталось " + hoursLeft + " час/а/ов");
     }
 
 }
