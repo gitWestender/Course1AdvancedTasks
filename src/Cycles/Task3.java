@@ -3,12 +3,15 @@ package Cycles;
 public class Task3 {
 
     static int counter = 1;
+
     public static void main(String[] args) {
         task1();
         task2();
         task3();
         task4();
+        task5();
     }
+
     static void task1() {
         System.out.println("\nЗадание " + counter++);
         int startNumber = 1000;
@@ -56,6 +59,18 @@ public class Task3 {
             System.out.print(startNum + " ");
             startNum *= 2;
             count--;
+        }
+    }
+
+    static void task5() {
+        System.out.println("\nЗадание " + counter++);
+        int mounthDays = 31;
+        int correntDay = 1;
+        int week = 7;
+
+        while (correntDay <= mounthDays) {
+            System.out.print(correntDay + " " + (correntDay + 1) + " ");
+            correntDay += week;
         }
     }
 }
