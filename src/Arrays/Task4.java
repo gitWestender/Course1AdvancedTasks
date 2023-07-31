@@ -117,4 +117,18 @@ public class Task4 {
 
         System.out.println(Arrays.toString(fibonachiArray));
     }
+
+//    static void task5() {
+//        System.out.printf("\nЗадание %d:\n", counter++);
+//
+//        int[] fibonachiArray = new int[20];
+//        fibonachiArray[0] = 0;
+//        fibonachiArray[1] = 1;
+//
+//        for (int i = 2; i < fibonachiArray.length; i++) {
+//            fibonachiArray[i] = fibonachiArray[i - 2] + fibonachiArray[i - 1];
+//        }
+//
+//        System.out.println(Arrays.toString(fibonachiArray));
+//    }
 }
