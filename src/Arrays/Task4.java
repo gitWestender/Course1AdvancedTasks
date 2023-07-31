@@ -12,10 +12,11 @@ public class Task4 {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     static void task1() {
-        System.out.printf("\nЗадание %d:", counter++);
+        System.out.printf("\nЗадание %d:\n", counter++);
         int[] array = new int[15];
         int even = 0;
         int odd = 0;
@@ -50,6 +51,33 @@ public class Task4 {
         }
 
         System.out.println(Arrays.toString(array));
+    }
+
+    static void task3() {
+        System.out.printf("\nЗадание %d:\n", counter++);
+
+        int lenght = 5;
+        int[] firstNumbers = new int[lenght];
+        int[] secondNumbers = new int[lenght];
+
+        for (int i = 0; i < lenght; i++) {
+            firstNumbers[i] = ThreadLocalRandom.current().nextInt(0, 5 + 1);
+            secondNumbers[i] = ThreadLocalRandom.current().nextInt(0, 5 + 1);
+        }
+
+        int firstSumm = 0, secondSum = 0;
+
+        for (int i = 0; i < lenght; i++) {
+            firstSumm += firstNumbers[i];
+            secondSum += secondNumbers[i];
+        }
+
+        double firstAVG = firstSumm / lenght, secondAVG = secondSum / lenght;
+
+        String result = firstAVG > secondAVG ? "Ср.знач первого массива больше, чем второго"
+                : (firstAVG < secondAVG ? "Ср.знач второго массива больше, чем первого" : "Ср.знач равны");
+
+        System.out.println(result);
     }
 
 }
