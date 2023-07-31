@@ -13,6 +13,7 @@ public class Task4 {
         task1();
         task2();
         task3();
+        task4();
     }
 
     static void task1() {
@@ -80,4 +81,25 @@ public class Task4 {
         System.out.println(result);
     }
 
+    static void task4() {
+        System.out.printf("\nЗадание %d:\n", counter++);
+
+        int[] array = new int[4];
+        boolean bool = true;
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ThreadLocalRandom.current().nextInt(10, 99 + 1);
+        }
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > array[i - 1]) {
+                continue;
+            } else {
+                bool = false;
+                break;
+            }
+        }
+
+        System.out.println(bool);
+    }
 }
