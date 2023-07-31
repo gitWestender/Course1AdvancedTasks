@@ -14,6 +14,7 @@ public class Task4 {
         task2();
         task3();
         task4();
+        task5();
     }
 
     static void task1() {
@@ -101,5 +102,19 @@ public class Task4 {
         }
 
         System.out.println(bool);
+    }
+
+    static void task5() {
+        System.out.printf("\nЗадание %d:\n", counter++);
+
+        int[] fibonachiArray = new int[20];
+        int number = 1;
+
+        for (int i = 1; i < fibonachiArray.length; i++) {
+            fibonachiArray[i] = number;
+            number += fibonachiArray[i - 1];
+        }
+
+        System.out.println(Arrays.toString(fibonachiArray));
     }
 }
